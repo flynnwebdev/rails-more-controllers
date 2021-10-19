@@ -2,7 +2,7 @@ class MenuController < ApplicationController
   @@menu = { latte: 4.00, scone: 5.00, tea: 3.00 }
 
   def index
-    @menu = @@menu
+    @menu = MenuItem.all
     # render plain: "Hello"
   end
 

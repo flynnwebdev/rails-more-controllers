@@ -5,10 +5,10 @@
     <th>Item</th>
     <th>Price</th>
   </tr>
-  <% @menu.each do |key, val| %>
+  <% @menu.each do |item| %>
     <tr>
-        <td><%= link_to key.capitalize, menu_item_path(key) %></td>
-        <td><%= "$%.2f" % val %></td>
+        <td><%= link_to item.name.capitalize, menu_item_path(item.name) %></td>
+        <td><%= "$%.2f" % item.price %></td>
     </tr>
   <% end %>
 </table>
